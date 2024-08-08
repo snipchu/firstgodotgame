@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://rbg4h6d2hgtm"]
+[gd_scene load_steps=18 format=3 uid="uid://rbg4h6d2hgtm"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2tx6v"]
 [ext_resource type="Texture2D" uid="uid://csl4cvbiuijm8" path="res://assets/sprites/knight.png" id="1_3khq0"]
@@ -19,6 +19,42 @@ region = Rect2(64, 0, 32, 32)
 atlas = ExtResource("1_3khq0")
 region = Rect2(96, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5k2oh"]
+atlas = ExtResource("1_3khq0")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n248b"]
+atlas = ExtResource("1_3khq0")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lbu4"]
+atlas = ExtResource("1_3khq0")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0g3vl"]
+atlas = ExtResource("1_3khq0")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sdej"]
+atlas = ExtResource("1_3khq0")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60k53"]
+atlas = ExtResource("1_3khq0")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v63mc"]
+atlas = ExtResource("1_3khq0")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr55q"]
+atlas = ExtResource("1_3khq0")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cr3bv"]
+atlas = ExtResource("1_3khq0")
+region = Rect2(224, 64, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_4o233"]
 animations = [{
 "frames": [{
@@ -37,10 +73,47 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5k2oh")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n248b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lbu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0g3vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sdej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60k53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v63mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr55q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cr3bv")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iv2s1"]
-radius = 4.0
+radius = 5.0
 height = 14.0
 
 [node name="player" type="CharacterBody2D"]

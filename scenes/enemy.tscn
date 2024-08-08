@@ -41,7 +41,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ib81j"]
-size = Vector2(12, 11)
+size = Vector2(14, 11)
 
 [node name="enemy" type="Node2D"]
 script = ExtResource("1_ncne3")
@@ -54,5 +54,13 @@ frame_progress = 0.261524
 [node name="killzone" parent="." instance=ExtResource("2_at2pq")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(0, 5.5)
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_ib81j")
+
+[node name="raycastright" type="RayCast2D" parent="."]
+position = Vector2(0, 6)
+target_position = Vector2(7, 0)
+
+[node name="raycastleft" type="RayCast2D" parent="."]
+position = Vector2(0, 6)
+target_position = Vector2(-7, 0)
